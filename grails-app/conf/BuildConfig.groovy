@@ -11,6 +11,9 @@ grails.project.source.level = 1.6
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
+def seleniumVersion = "2.32.0"
+def gebVersion = "0.7.2"
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -40,6 +43,9 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
+        test ("org.codehaus.geb:geb-junit4:$gebVersion")
+        test ("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
+        test ("org.seleniumhq.selenium:selenium-support:$seleniumVersion")
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
     }
@@ -59,5 +65,6 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.8"
 
         compile ':cache:1.1.1'
+        compile ':cucumber:0.10.0'
     }
 }

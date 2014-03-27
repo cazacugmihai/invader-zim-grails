@@ -1,7 +1,7 @@
 cucumber {
 	tags = ["~@wip"]
 	features = ["test/cucumber"]
-	glue = ["test/cucumber/steps", "test/cucumber/support"]
+	glue = ["test/steps", "test/support"]
     formats = [
         "json:target/test-reports/cucumber.json",
         "html:target/test-reports/cucumber"

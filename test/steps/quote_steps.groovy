@@ -24,5 +24,6 @@ Then(~'^we are taken to the Quote Page$') { ->
 
 And(~'^we see "([^"]*)"$') { String quote ->
     def invasionQuote = page.fetchInvasionQuote()
+    sleep(5000)
     assert invasionQuote == quote
 }

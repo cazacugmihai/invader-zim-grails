@@ -7,6 +7,6 @@
 
 <body>
     <blockquote class="bq1" id="message"><p>${quote.message}</p></blockquote>
-    <p class="after" id="name">Invader ${quote.name} says:</p>
+    <p class="after" id="name">--Invader ${quote.name}:</p>
 </body>
 </html>

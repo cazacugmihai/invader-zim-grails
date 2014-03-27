@@ -1,7 +1,7 @@
 class UrlMappings {
 
 	static mappings = {
-		"/invader/$id"(controller: "invader")
+		"/invader/$name"(controller: "invader")
 
 		"/"(view:"/index")
 		"500"(view:'/error')
